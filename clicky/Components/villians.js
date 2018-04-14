@@ -1,22 +1,22 @@
-import Score from './Score';
-import GameItems from "./GameItem";
+import Score from './scoring';
+import GameItems from "./game";
 
 class MainPart extends Component{
 	state = {
 		score: 0,
 		bestScore: 0,
 		clickedChars:{"": false
-		, "": false
-		, "": false
-		, "": false
-		, "": false
-		, "": false
-		, "": false
-		, "": false
-		, "": false
-		, "": false
-		, "": false
-		, "": false}
+		, "Alien 1": false
+		, "Alien 2": false
+		, "Alien 3": false
+		, "Alien 5": false
+		, "Alien 6": false
+		, "Devil": false
+		, "evilMorty": false
+		, "Maid": false
+		, "mytholog": false
+		, "Phoenix": false
+		, "Snowball": false}
 	};
 
 	constructor(props){
@@ -50,7 +50,7 @@ class MainPart extends Component{
 			<h2 id="1" key="asda" className="hide-on-small-only">Hello %username%</h2>
 			<div className="row">
 			<div className="col s12 m9">
-			<GameItems onClick={this.guessChar}></GameItems>
+			<game onClick={this.guessChar}></game>
 			</div>
 			<div className="col m3 ">
 			<Score score={this.state.score} bScore={this.state.bestScore}></Score>

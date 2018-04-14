@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import scoring from './scoring';
+import villians from "./villians";
 
 class game extends Component{
 	constructor() {
